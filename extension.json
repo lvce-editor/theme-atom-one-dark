@@ -1,0 +1,12 @@
+{
+  "id": "builtin.theme-atom-one-dark",
+  "name": "Atom One Dark Theme",
+  "description": "One Dark Theme based on Atom",
+  "colorThemes": [
+    {
+      "id": "atom-one-dark",
+      "label": "Atom One Dark",
+      "path": "color-theme.json"
+    }
+  ]
+}
