@@ -4,7 +4,7 @@
   "type": "module",
   "description": "",
   "scripts": {
-    "dev": "node ./node_modules/@lvce-editor/server/bin/server.js --only-extension=. --theme=ayu"
+    "dev": "node ./node_modules/@lvce-editor/server/bin/server.js --only-extension=. --theme=atom-one-dark"
   },
   "keywords": [],
   "author": "",
