@@ -70,6 +70,10 @@
       "foreground": "#98C379"
     },
     {
+      "name": "JsonPropertyValueString",
+      "foreground": "#98C379"
+    },
+    {
       "name": "PunctuationString",
       "foreground": "#98C379"
     },
