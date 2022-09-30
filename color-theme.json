@@ -127,6 +127,10 @@
     {
       "name": "Macro",
       "foreground": "#C678DD"
+    },
+    {
+      "name": "Heading",
+      "foreground": "#e06c75"
     }
   ]
 }
