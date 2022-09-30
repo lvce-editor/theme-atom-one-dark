@@ -28,6 +28,9 @@
 
     "MainBackground": "#282C34",
 
+    "MenuBackground": "rgb(53, 59, 69)",
+    "MenuItemHoverBackground": "rgb(44, 49, 58)",
+
     "PanelBackground": "rgb(40, 44, 52)",
     "PanelBorderTopColor": "",
     "PanelTabActiveForeground": "rgb(231, 231, 231)",
