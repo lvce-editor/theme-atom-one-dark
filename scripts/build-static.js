@@ -194,7 +194,12 @@ replaceSync(
   `/manifest.json`,
   `${pathPrefix}/manifest.json`
 )
-
+replaceSync(
+  join(root, 'dist', 'index.html'),
+  '</title>',
+  `</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">`
+)
 replaceSync(
   join(root, 'dist', 'manifest.json'),
   `/${commitHash}`,
