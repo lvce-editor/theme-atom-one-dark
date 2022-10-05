@@ -7,7 +7,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 const pathPrefix = process.env.PATH_PREFIX || ''
 
-const dirents = readdirSync(join(root, 'dist'))
+const dirents = readdirSync(
+  join(root, 'node_modules', '@lvce-editor', 'server', 'static')
+)
 const RE_COMMIT_HASH = /^[a-z\d]+$/
 const isCommitHash = (dirent) => {
   return dirent.length === 7 && dirent.match(RE_COMMIT_HASH)
