@@ -149,11 +149,17 @@ const languages = languageBasicsDirents
   .map(readJson)
   .flatMap(getLanguages)
 writeJson(join(root, 'dist', commitHash, 'config', 'languages.json'), languages)
-
 cpSync(
   join(root, 'node_modules', '@lvce-editor', 'shared-process', 'extensions'),
   join(root, 'dist', 'extensions'),
   {
     recursive: true,
   }
+)
+
+const pathPrefix = process.env.PATH_PREFIX || ''
+replaceSync(
+  join(root, 'dist', 'index.html'),
+  `/${commitHash}`,
+  `/${pathPrefix}/${commitHash}`
 )
