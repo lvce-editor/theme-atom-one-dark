@@ -112,6 +112,19 @@ replaceSync(
   'platform2 = "web";'
 )
 replaceSync(
+  join(
+    root,
+    'dist',
+    commitHash,
+    'packages',
+    'renderer-worker',
+    'dist',
+    'rendererWorkerMain.js'
+  ),
+  `return "/${commitHash}";`,
+  `return "${pathPrefix}/${commitHash}";`
+)
+replaceSync(
   join(root, 'dist', commitHash, 'config', 'defaultSettings.json'),
   `"workbench.colorTheme": "slime"`,
   `"workbench.colorTheme": "atom-one-dark"`
