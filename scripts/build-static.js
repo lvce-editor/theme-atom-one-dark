@@ -111,6 +111,11 @@ replaceSync(
   `"workbench.colorTheme": "slime"`,
   `"workbench.colorTheme": "atom-one-dark"`
 )
+replaceSync(
+  join(root, 'dist', commitHash, 'config', 'defaultSettings.json'),
+  `"workbench.saveStateOnVisibilityChange": false`,
+  `"workbench.saveStateOnVisibilityChange": true`
+)
 
 const extensionDirents = readdirSync(
   join(root, 'node_modules', '@lvce-editor', 'shared-process', 'extensions')
