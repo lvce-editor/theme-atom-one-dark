@@ -141,6 +141,14 @@
     {
       "name": "KeywordReturn",
       "foreground": "#C678DD"
+    },
+    {
+      "name": "Text",
+      "foreground": "#ABB2BF"
+    },
+    {
+      "name": "PropertyName",
+      "foreground": "#E06C75"
     }
   ]
 }
