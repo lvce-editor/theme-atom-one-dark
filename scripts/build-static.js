@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const root = path.join(__dirname, '..')
+const pathPrefix = process.env.PATH_PREFIX || ''
 
 fs.rmSync(join(root, 'dist'), { recursive: true, force: true })
 
@@ -70,6 +71,19 @@ replaceSync(
   ),
   'platform = getPlatform();',
   'platform = "web"'
+)
+replaceSync(
+  join(
+    root,
+    'dist',
+    commitHash,
+    'packages',
+    'renderer-process',
+    'dist',
+    'rendererProcessMain.js'
+  ),
+  `return "/${commitHash}";`,
+  `return "${pathPrefix}/${commitHash}";`
 )
 replaceSync(
   join(
@@ -157,7 +171,6 @@ cpSync(
   }
 )
 
-const pathPrefix = process.env.PATH_PREFIX || ''
 replaceSync(
   join(root, 'dist', 'index.html'),
   `/${commitHash}`,
@@ -167,4 +180,10 @@ replaceSync(
   join(root, 'dist', 'index.html'),
   `/manifest.json`,
   `${pathPrefix}/manifest.json`
+)
+
+replaceSync(
+  join(root, 'dist', 'manifest.json'),
+  `/${commitHash}`,
+  `${pathPrefix}/${commitHash}`
 )
