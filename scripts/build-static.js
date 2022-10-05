@@ -161,5 +161,10 @@ const pathPrefix = process.env.PATH_PREFIX || ''
 replaceSync(
   join(root, 'dist', 'index.html'),
   `/${commitHash}`,
-  `/${pathPrefix}/${commitHash}`
+  `${pathPrefix}/${commitHash}`
+)
+replaceSync(
+  join(root, 'dist', 'index.html'),
+  `/manifest.json`,
+  `${pathPrefix}/manifest.json`
 )
