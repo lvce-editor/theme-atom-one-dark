@@ -148,7 +148,7 @@ const getLanguages = (extension) => {
   for (const language of extension.languages || []) {
     languages.push({
       ...language,
-      tokenize: `/${commitHash}/extensions/${extension.id}/${language.tokenize}`,
+      tokenize: `${pathPrefix}/${commitHash}/extensions/${extension.id}/${language.tokenize}`,
     })
   }
   return languages
