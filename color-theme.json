@@ -11,7 +11,7 @@
     "ContextMenuBackground": "rgb(53, 59, 69)",
 
     "EditorBackGround": "",
-    "EditorScrollBarBackground": "",
+    "EditorScrollBarBackground": "rgba(90, 99, 117, 0.5)",
     "EditorCursorBackground": "#528bff",
     "EditorSelectionBackground": "#3e4451",
 
@@ -53,7 +53,9 @@
     "TitleBarBackground": "#21252B",
     "TitleBarBorderBottomColor": "",
     "TitleBarColor": "",
-    "TitleBarColorInactive": ""
+    "TitleBarColorInactive": "",
+
+    "TreeItemHoverBackground": "rgba(44, 49, 58, 0.4)"
   },
   "tokenColors": [
     {
@@ -131,6 +133,14 @@
     {
       "name": "Heading",
       "foreground": "#e06c75"
+    },
+    {
+      "name": "KeywordNew",
+      "foreground": "#C678DD"
+    },
+    {
+      "name": "KeywordReturn",
+      "foreground": "#C678DD"
     }
   ]
 }
