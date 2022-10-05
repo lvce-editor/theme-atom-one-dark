@@ -7,36 +7,22 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 const pathPrefix = process.env.PATH_PREFIX || ''
 
+const dirents = readdirSync(join(root, 'dist'))
+const RE_COMMIT_HASH = /^[a-z\d]+$/
+const isCommitHash = (dirent) => {
+  return dirent.length === 7 && dirent.match(RE_COMMIT_HASH)
+}
+const commitHash = dirents.find(isCommitHash) || ''
+
 fs.rmSync(join(root, 'dist'), { recursive: true, force: true })
 
 fs.mkdirSync(path.join(root, 'dist'))
 
-fs.mkdirSync(join(root, 'dist', 'extensions', 'builtin.theme-atom-one-dark'), {
-  recursive: true,
-})
-fs.copyFileSync(
-  join(root, 'README.md'),
-  join(root, 'dist', 'extensions', 'builtin.theme-atom-one-dark', 'README.md')
-)
-fs.copyFileSync(
-  join(root, 'extension.json'),
-  join(
-    root,
-    'dist',
-    'extensions',
-    'builtin.theme-atom-one-dark',
-    'extension.json'
-  )
-)
-fs.copyFileSync(
-  join(root, 'color-theme.json'),
-  join(
-    root,
-    'dist',
-    'extensions',
-    'builtin.theme-atom-one-dark',
-    'color-theme.json'
-  )
+fs.mkdirSync(
+  join(root, 'dist', commitHash, 'extensions', 'builtin.theme-atom-one-dark'),
+  {
+    recursive: true,
+  }
 )
 fs.cpSync(
   join(root, 'node_modules', '@lvce-editor', 'server', 'static'),
@@ -53,12 +39,6 @@ const replaceSync = (path, occurrence, replacement) => {
   writeFileSync(path, newContent)
 }
 
-const dirents = readdirSync(join(root, 'dist'))
-const RE_COMMIT_HASH = /^[a-z\d]+$/
-const isCommitHash = (dirent) => {
-  return dirent.length === 7 && dirent.match(RE_COMMIT_HASH)
-}
-const commitHash = dirents.find(isCommitHash) || ''
 replaceSync(
   join(
     root,
@@ -166,7 +146,7 @@ const getLanguages = (extension) => {
   for (const language of extension.languages || []) {
     languages.push({
       ...language,
-      tokenize: `/extensions/${extension.id}/${language.tokenize}`,
+      tokenize: `/${commitHash}/extensions/${extension.id}/${language.tokenize}`,
     })
   }
   return languages
@@ -178,7 +158,7 @@ const languages = languageBasicsDirents
 writeJson(join(root, 'dist', commitHash, 'config', 'languages.json'), languages)
 cpSync(
   join(root, 'node_modules', '@lvce-editor', 'shared-process', 'extensions'),
-  join(root, 'dist', 'extensions'),
+  join(root, 'dist', commitHash, 'extensions'),
   {
     recursive: true,
   }
@@ -204,4 +184,38 @@ replaceSync(
   join(root, 'dist', 'manifest.json'),
   `/${commitHash}`,
   `${pathPrefix}/${commitHash}`
+)
+
+fs.copyFileSync(
+  join(root, 'README.md'),
+  join(
+    root,
+    'dist',
+    commitHash,
+    'extensions',
+    'builtin.theme-atom-one-dark',
+    'README.md'
+  )
+)
+fs.copyFileSync(
+  join(root, 'extension.json'),
+  join(
+    root,
+    'dist',
+    commitHash,
+    'extensions',
+    'builtin.theme-atom-one-dark',
+    'extension.json'
+  )
+)
+fs.copyFileSync(
+  join(root, 'color-theme.json'),
+  join(
+    root,
+    'dist',
+    commitHash,
+    'extensions',
+    'builtin.theme-atom-one-dark',
+    'color-theme.json'
+  )
 )
