@@ -6,6 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const root = path.join(__dirname, '..')
 const pathPrefix = process.env.PATH_PREFIX || ''
+const name = 'atom-one-dark'
 
 const dirents = readdirSync(
   join(root, 'node_modules', '@lvce-editor', 'server', 'static')
@@ -21,7 +22,7 @@ fs.rmSync(join(root, 'dist'), { recursive: true, force: true })
 fs.mkdirSync(path.join(root, 'dist'))
 
 fs.mkdirSync(
-  join(root, 'dist', commitHash, 'extensions', 'builtin.theme-atom-one-dark'),
+  join(root, 'dist', commitHash, 'extensions', `builtin.theme-${name}`),
   {
     recursive: true,
   }
@@ -109,7 +110,7 @@ replaceSync(
 replaceSync(
   join(root, 'dist', commitHash, 'config', 'defaultSettings.json'),
   `"workbench.colorTheme": "slime"`,
-  `"workbench.colorTheme": "atom-one-dark"`
+  `"workbench.colorTheme": "${name}"`
 )
 replaceSync(
   join(root, 'dist', commitHash, 'config', 'defaultSettings.json'),
@@ -200,7 +201,7 @@ fs.copyFileSync(
     'dist',
     commitHash,
     'extensions',
-    'builtin.theme-atom-one-dark',
+    `builtin.theme-${name}`,
     'README.md'
   )
 )
@@ -211,7 +212,7 @@ fs.copyFileSync(
     'dist',
     commitHash,
     'extensions',
-    'builtin.theme-atom-one-dark',
+    `builtin.theme-${name}`,
     'extension.json'
   )
 )
@@ -222,7 +223,7 @@ fs.copyFileSync(
     'dist',
     commitHash,
     'extensions',
-    'builtin.theme-atom-one-dark',
+    `builtin.theme-${name}`,
     'color-theme.json'
   )
 )
