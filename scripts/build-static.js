@@ -226,3 +226,9 @@ fs.copyFileSync(
     'color-theme.json'
   )
 )
+
+replaceSync(
+  join(root, 'dist', commitHash, 'css', 'App.css'),
+  `/${commitHash}`,
+  `${pathPrefix}/${commitHash}`
+)
