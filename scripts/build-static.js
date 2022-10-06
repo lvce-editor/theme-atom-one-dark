@@ -243,8 +243,13 @@ for (const languageBasicsDirent of languageBasicsDirents) {
     }
   )
 }
+
+const getThemeName = (dirent) => {
+  return dirent.slice('builtin.theme-'.length)
+}
+
 for (const themeDirent of themeDirents) {
-  const themeId = themeDirent.slice('builtin.theme-'.length)
+  const themeId = getThemeName(themeDirent)
   cpSync(
     join(
       root,
@@ -258,6 +263,9 @@ for (const themeDirent of themeDirents) {
     join(root, 'dist', commitHash, 'themes', `${themeId}.json`)
   )
 }
+
+const themeIds = [...themeDirents.map(getThemeName), name]
+writeJson(join(root, 'dist', commitHash, 'config', 'themes.json'), themeIds)
 
 for (const iconThemeDirent of iconThemeDirents) {
   const iconThemeId = iconThemeDirent.slice('builtin.'.length)
