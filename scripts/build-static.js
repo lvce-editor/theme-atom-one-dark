@@ -365,5 +365,3 @@ replaceSync(
   `/${commitHash}`,
   `${pathPrefix}/${commitHash}`
 )
-
-// replaceSync(join(root, ))
