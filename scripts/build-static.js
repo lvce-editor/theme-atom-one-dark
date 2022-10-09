@@ -166,6 +166,22 @@ replaceSync(
   `return \`\${extensionPath}\${value}\``,
   `return \`${pathPrefix}/${commitHash}/file-icons/\${value.slice(7)}\``
 )
+
+// workaround for firefox bug
+replaceSync(
+  join(
+    root,
+    'dist',
+    commitHash,
+    'packages',
+    'renderer-worker',
+    'dist',
+    'rendererWorkerMain.js'
+  ),
+  `//# sourceMappingURL`,
+  `export {}
+//# sourceMappingURL`
+)
 replaceSync(
   join(root, 'dist', commitHash, 'config', 'defaultSettings.json'),
   `"workbench.colorTheme": "slime"`,
