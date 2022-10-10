@@ -152,6 +152,14 @@
     {
       "name": "PropertyName",
       "foreground": "#E06C75"
+    },
+    {
+      "name": "YamlPropertyName",
+      "foreground": "#E06C75"
+    },
+    {
+      "name": "YamlPropertyValueString",
+      "foreground": "#98C379"
     }
   ]
 }
