@@ -160,6 +160,18 @@
     {
       "name": "YamlPropertyValueString",
       "foreground": "#98C379"
+    },
+    {
+      "name": "Function",
+      "foreground": "#61AFEF"
+    },
+    {
+      "name": "KeywordControl",
+      "foreground": "#C678DD"
+    },
+    {
+      "name": "KeywordThis",
+      "foreground": "#E06C75"
     }
   ]
 }
