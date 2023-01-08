@@ -172,6 +172,10 @@
     {
       "name": "KeywordThis",
       "foreground": "#E06C75"
+    },
+    {
+      "name": "KeywordFunction",
+      "foreground": "#C678DD"
     }
   ]
 }
