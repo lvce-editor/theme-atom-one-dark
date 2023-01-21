@@ -176,6 +176,18 @@
     {
       "name": "KeywordFunction",
       "foreground": "#C678DD"
+    },
+    {
+      "name": "MarkdownLinkName",
+      "foreground": "#61AFEF"
+    },
+    {
+      "name": "MarkdownLinkUrl",
+      "foreground": "#C678DD"
+    },
+    {
+      "name": "MarkdownString",
+      "foreground": "#ABB2BF"
     }
   ]
 }
