@@ -203,6 +203,10 @@
     {
       "name": "KeywordModifier",
       "foreground": "#C678DD"
+    },
+    {
+      "name": "Class",
+      "foreground": "#E5C07B"
     }
   ]
 }
