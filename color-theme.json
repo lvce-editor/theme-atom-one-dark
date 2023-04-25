@@ -97,6 +97,10 @@
       "foreground": "#61AFEF"
     },
     {
+      "name": "CssAtRule",
+      "foreground": "#C678DD"
+    },
+    {
       "name": "CssPropertyName",
       "foreground": "#ABB2BF"
     },
