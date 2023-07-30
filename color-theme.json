@@ -207,6 +207,10 @@
     {
       "name": "Class",
       "foreground": "#E5C07B"
+    },
+    {
+      "name": "CssPseudoSelector",
+      "foreground": "#D19A66"
     }
   ]
 }
