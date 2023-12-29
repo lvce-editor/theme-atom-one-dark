@@ -46,6 +46,8 @@
 
     "SideBarBackground": "#21252B",
 
+    "SplitButtonBackground": "#4d78cc",
+
     "StatusBarBackground": "#21252B",
     "StatusBarBorderTopColor": "transparent",
 
