@@ -67,6 +67,7 @@
     "TitleBarButtonCloseHoverForeground": "#fff",
 
     "TreeItemHoverBackground": "rgba(44, 49, 58, 0.4)",
+    "TreeItemActiveBackground": "#2c313a",
 
     "WorkbenchForeground": "#cccccc"
   },
