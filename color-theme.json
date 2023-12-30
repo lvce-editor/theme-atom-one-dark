@@ -41,6 +41,7 @@
     "PanelBorderTopColor": "",
     "PanelTabActiveForeground": "rgb(231, 231, 231)",
     "PanelTabForeground": "rgba(231, 231, 231, 0.6)",
+    "PanelBorderTopColor": "rgba(128, 128, 128, 0.35)",
 
     "QuickPickBackground": "rgb(33, 37, 43)",
 
