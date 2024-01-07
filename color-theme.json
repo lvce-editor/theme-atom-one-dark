@@ -27,6 +27,7 @@
     "HighlightInsertedBackground":"rgba(0, 128, 155, 0.2)",
 
     "InputBackground": "#1B1D23",
+"InputBoxBackground":"#1b1d23",
 
     "ListActiveSelectionBackground": "#2C313A",
     "ListActiveSelectionForeground": "",
