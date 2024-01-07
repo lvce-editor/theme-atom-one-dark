@@ -22,6 +22,9 @@
     "EditorSelectionBackground": "#3e4451",
 
     "FocusOutline": "#528bff",
+    
+    "HighlightDeletedBackground":"rgba(255, 0, 0, 0.2)",
+    "HighlightInsertedBackground":"rgba(0, 128, 155, 0.2)",
 
     "InputBackground": "#1B1D23",
 
