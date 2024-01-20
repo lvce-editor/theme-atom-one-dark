@@ -22,12 +22,12 @@
     "EditorSelectionBackground": "#3e4451",
 
     "FocusOutline": "#528bff",
-    
-    "HighlightDeletedBackground":"rgba(255, 0, 0, 0.2)",
-    "HighlightInsertedBackground":"rgba(0, 128, 155, 0.2)",
+
+    "HighlightDeletedBackground": "rgba(255, 0, 0, 0.2)",
+    "HighlightInsertedBackground": "rgba(0, 128, 155, 0.2)",
 
     "InputBackground": "#1B1D23",
-"InputBoxBackground":"#1b1d23",
+    "InputBoxBackground": "#1b1d23",
 
     "ListActiveSelectionBackground": "#2C313A",
     "ListActiveSelectionForeground": "",
@@ -102,7 +102,7 @@
     },
     {
       "name": "CssSelector",
-      "foreground": "#D19A66"
+      "foreground": "#E06C75"
     },
     {
       "name": "CssSelectorId",
