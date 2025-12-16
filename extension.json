@@ -2,6 +2,7 @@
   "id": "builtin.theme-atom-one-dark",
   "name": "Atom One Dark Theme",
   "description": "One Dark Theme based on Atom",
+  "categories": ["themes"],
   "colorThemes": [
     {
       "id": "atom-one-dark",
