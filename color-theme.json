@@ -132,6 +132,10 @@
       "foreground": "#C678DD"
     },
     {
+      "name": "KeywordOperator",
+      "foreground": "#56B6C2"
+    },
+    {
       "name": "Numeric",
       "foreground": "#D19A66"
     },
